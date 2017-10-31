@@ -1,0 +1,17 @@
+# Template used to create this container: /usr/share/lxc/templates/lxc-archlinux
+# Parameters passed to the template:
+# Template script checksum (SHA-1): af9686ca0f409a1bca2b57166f91386da08c7060
+# For additional config options, please look at lxc.container.conf(5)
+
+# Uncomment the following line to support nesting containers:
+#lxc.include = /usr/share/lxc/config/nesting.conf
+# (Be aware this has security implications)
+
+#lxc.net.0.type = empty
+lxc.include = /lxc/test-arch/config.network
+#lxc.rootfs.path = dir:/root/media/lxc/test/rootfs
+lxc.rootfs.path = dir:/lxc/test/rootfs
+lxc.uts.name = test
+lxc.arch = x86_64
+lxc.include = /usr/share/lxc/config/archlinux.common.conf
+
